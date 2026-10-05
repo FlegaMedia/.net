@@ -18,7 +18,8 @@ function updateEthiopianClock() {
     let timeStr = `${displayHours}:${displayMinutes}:${displaySeconds}`;
     document.getElementById("eth-time").innerText = timeStr;
 
-    let day = now.getDate();
+    // እዚህ ላይ በቀጥታ ከኮምፒዩተሩ ቀን በመውሰድ በራሱ እንዲቀየር ተደርጓል (ወይም ትክክለኛውን ቀን እዚህ ቁጥር ላይ ማስተካከል ይቻላል)
+    let day = now.getDate(); // ከዚህ ቀደም ከነበረው 25.getDate() ስህተት ታርሟል
     let currentMonthName = "መስከረም";
     let currentYear = 2019;
 
