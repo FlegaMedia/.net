@@ -37,7 +37,7 @@ function updateEthiopianClock() {
         currentMonthName = "ጥቅምት";
     }
 
-    document.getElementById("eth-date").innerText = `${currentMonthName} ${currentDay} ፥ ${currentYear} ዓ.ም`;
+    document.getElementById("eth-date").innerText = `${currentMonthName} ${currentDay} - ${currentYear} ዓ.ም`;
 }
 
 // ሰዓቱን በየ 1 ሰከንድ ማደስ
