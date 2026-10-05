@@ -2,432 +2,74 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="keywords" content="html, css, javascript">
-      <meta name="description" content="This is a technology tutorial">
-      <meta name="author" content="Getnet">
-      <base href="https://github.com/FlegaMedia/New/edit/main/index.html" target="_blank">
-      <title>Flega Media - Technology Tutorial</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="html, css, javascript">
+    <meta name="description" content="This is a technology tutorial">
+    <meta name="author" content="Getnet">
+    <base href="https://github.com/FlegaMedia/New/edit/main/index.html" target="_blank">
+    <title>Flega Media - Technology Tutorial</title>
     
-    <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        body {
-            font-family: Arial, sans-serif;
-            background: #f5f5f5;
-            color: #222;
-        }
-    /* ለአዳዲስ በተኖች ዲዛይን (Button Styles) */
-.category-filter, .social-share {
-  margin: 20px 0;
-  text-align: center;
-}
-
-.category-filter button, .dark-mode-toggle, .share-btn {
-  padding: 10px 20px;
-  margin: 5px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  background-color: #DAA520; /* የድረ-ገጹ መለያ ቀለም */
-  color: white;
-  font-weight: bold;
-  transition: background-color 0.3s;
-}
-
-.category-filter button:hover, .dark-mode-toggle:hover {
-  background-color: #b8860b;
-}
-
-.share-btn.facebook { background-color: #1877F2; }
-.share-btn.twitter { background-color: #1DA1F2; }
-
-/* የጨለማ ሁነታ ዲዛይን (Dark Mode Styles) */
-body.dark-mode,
-body.dark-mode header,
-body.dark-mode .site-header,
-body.dark-mode .hero,
-body.dark-mode .card,
-body.dark-mode .footer-container,
-body.dark-mode .footer-bottom {
-  background-image: none !important;
-  background-color: #121212 !important;
-  color: #ffffff !important;
-}
-
-body.dark-mode h1,
-body.dark-mode h2,
-body.dark-mode h3,
-body.dark-mode p,
-body.dark-mode a,
-body.dark-mode nav a {
-  color: #ffffff !important;
-}
-
-body.dark-mode .category-filter button,
-body.dark-mode .dark-mode-toggle {
-  background-color: #333333 !important;
-  color: #ffffff !important;
-}
-
-body.dark-mode .category-filter button:hover,
-body.dark-mode .dark-mode-toggle:hover {
-  background-color: #555555 !important;
-}
-
-body.dark-mode .search-container input[type="text"] {
-  background-color: #222222 !important;
-  color: #ffffff !important;
-  border: 1px solid #444444 !important;
-}
-
-body.dark-mode .search-container button {
-  background-color: #333333 !important;
-  color: #ffffff !important;
-  border: 1px solid #444444 !important;
-}
-
-body.dark-mode .category-filter button,
-body.dark-mode .dark-mode-toggle {
-  background-color: #333333 !important;
-  color: #ffffff !important;
-}
-
-        /* የላይኛውን ሜኑ (Navigation) ሙሉ በሙሉ ለማጥቆር */
-body.dark-mode nav,
-body.dark-mode .nav,
-body.dark-mode .menu,
-body.dark-mode header {
-  background: #121212 !important;
-  background-color: #121212 !important;
-}
-
-/* የሰርች ማስገቢያውን እና በተኑን ለማጥቆር */
-body.dark-mode input,
-body.dark-mode input[type="text"],
-body.dark-mode input[type="search"],
-body.dark-mode button {
-  background: #222222 !important;
-  background-color: #222222 !important;
-  color: #ffffff !important;
-  border: 1px solid #555555 !important;
-}
-
-/* የሰርች በተኑ ላይ ያለው ጽሑፍ በደንብ እንዲታይ */
-body.dark-mode button {
-  background-color: #333333 !important;
-}
-
-/* ከታች የሚታየውን ነጭ ክፍተት ለማጥፋት */
-body.dark-mode footer,
-body.dark-mode .footer-container {
-  background: #121212 !important;
-  background-color: #121212 !important;
-  border: none !important;
-  margin: 0 !important;
-}
-
-body.dark-mode .category-filter button:hover,
-body.dark-mode .dark-mode-toggle:hover {
-  background-color: #555555 !important;
-}
-
-
-body.dark-mode .category-filter button:hover {
-  background-color: #555555 !important;
-}
-
-        header {
-    background-image: url('Banner.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: top;
-    aspect-ratio: 16 / 5;
-    width: 100%;
-}
-
-        header h1 {
-            font-size: 32px;
-        }
-
-        nav {
-    margin-top: 0px;
-    background-color: #AE9441;
-    display: flex;
-    flex-wrap: rap; 
-    justify-content: center;
-    gap:0px;
-}
-       
-nav a {
-    color: #0000FF;
-    font-weight:bold;
-    text-decoration: none;
-    margin: 0 0px;
-    padding: 5px 12px;
-    display: inline-block;
-    border-radius: 5px;
-}
-        .hero {
-            padding: 20px 20px;
-            text-align: center;
-            background: white;
-        }
-
-        .hero h2 {
-            font-size: 38px;
-            margin-bottom: 15px;
-        }
-
-        .hero p {
-            font-size: 18px;
-            margin-bottom: 25px;
-        }
-
-        .button {
-            display: inline-block;
-            background: #e60000;
-            color: white;
-            padding: 12px 25px;
-            text-decoration: none;
-            border-radius: 6px;
-        }
-        .search-container {
-  display: flex;
-  justify-content: center;
-  margin: 15px 0;
-}
-
-.search-container input[type="text"] {
-  padding: 10px;
-  font-size: 16px;
-  border: 1px solid #ccc;
-  border-radius: 5px 0 0 5px;
-  width: 220px;
-  outline: none;
-}
-
-.search-container button {
-    padding: 10px 15px;
-    background-color: #28a745; /* አረንጓዴ ቀለም */
-    color: white;
-    font-size: 16px;
-    border: 1px solid #28a745;
-    border-radius: 0 5px 5px 0;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    gap: 5px;
-}
-
-.search-container button:hover {
-    background-color: #218838; /* ማውዙ ሲያርፍበት (Hover) ጠቆር ያለ አረንጓዴ እንዲሆን */
-}
-
-
-        .section {
-            padding: 40px 20px;
-            text-align: center;
-        }
-
-        .cards {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            flex-wrap: wrap;
-            margin-top: 25px;
-        }
-
-        .card {
-            background: white;
-            padding: 25px;
-            width: 280px;
-            border-radius: 10px;
-            box-shadow: 0 2px 8px #ccc;
-        }
-
-        .card h3 {
-            margin-bottom: 10px;
-        }
-.card iframe {
-    width: 100%;
-    aspect-ratio: 16 / 9;
-    height: auto;
-    display: block;
-}
-        /* የግርጌ (Footer) እና ማህበራዊ ሚዲያ ዲዛይን */
-.site-footer {
-    background-color: #f8f9fa; /* ፈዘዝ ያለ ግራጫ ለልዩነት */
-    padding-top: 40px;
-    border-top: 3px solid #DAA520; /* ከላይኛው ወርቃማ ቀለም ጋር እንዲመሳሰል */
-    font-family: Arial, sans-serif;
-    margin-top: 40px;
-}
-
-.footer-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    max-width: 1200px;
-    margin: 0 auto;
-    text-align: center;
-    gap: 20px;
-    padding-bottom: 20px;
-}
-
-.footer-section {
-    flex: 1;
-    min-width: 250px;
-    margin-bottom: 20px;
-    padding: 0 15px;
-}
-
-.footer-section h3 {
-    color: #DAA520;
-    margin-bottom: 15px;
-    font-size: 18px;
-    font-weight: bold;
-}
-
-.footer-section p {
-    color: #555;
-    line-height: 1.5;
-    font-size: 14px;
-}
-
-/* የማህበራዊ ሚዲያ አዝራሮች */
-.social-icons {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin-top: 10px;
-}
-
-.social-icon {
-    text-decoration: none;
-    color: white;
-    padding: 8px 15px;
-    border-radius: 5px;
-    font-weight: bold;
-    font-size: 13px;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-.social-icon.youtube { background-color: #FF0000; }
-.social-icon.telegram { background-color: #0088cc; }
-.social-icon.facebook { background-color: #1877F2; }
-.social-icon.tiktok { background-color: #000000; }
-
-/* አይጥ (mouse) ሲያርፍባቸው የሚያሳዩት ጸባይ */
-.social-icon:hover {
-    opacity: 0.85;
-    transform: translateY(-2px); /* ትንሽ ወደ ላይ ከፍ እንዲሉ */
-}
-
-/* የመጨረሻው የቅጂ መብት ክፍል */
-.footer-bottom {
-    background-color: #DAA520; 
-    color: #ffffff;
-    text-align: center;
-    padding: 15px 0;
-}
-
-.footer-bottom p {
-    margin: 0;
-    font-size: 14px;
-    font-weight: bold;
-}
-.hero-image-container {
-  text-align: center;
-  margin: 30px auto;
-  max-width: 800px;
-  padding: 0 20px;
-}
-
-.promo-image {
-  width: 100%;
-  height: auto;
-  border-radius: 15px;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
-  transition: transform 0.3s ease;
-}
-
-.promo-image:hover {
-  transform: scale(1.02);
-}
-
-      a.button {
-    display: inline-block !important;
-    width: fit-content !important;
-    height: fit-content !important;
-    margin: 20px auto !important;
-    padding: 12px 25px !important;
-    text-align: center !important;
-}
-  
-    </style>
+    <!-- የ CSS ፋይል ማገናኛ -->
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
 <header>
 </header>
-    <nav>
-        <a href="#">Home</a>
-        <a href="#videos">Videos</a>
-        <a href="#tutorials">Tutorials</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
-    </nav>
-<section class="hero">
 
+<nav>
+    <a href="#">Home</a>
+    <a href="#videos">Videos</a>
+    <a href="#tutorials">Tutorials</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<section class="hero">
     <div class="search-container">
-    <input type="text" placeholder="Search...">
-  <button type="submit">&#128269; SEARCH</button>
-</div>
+        <input type="text" placeholder="Search...">
+        <button type="submit">&#128269; SEARCH</button>
+    </div>
     
-    <h1> እንኳን ወደ ፍለጋ ሚዲያ በደህና መጡ!</h1>
+    <h1>እንኳን ወደ ፍለጋ ሚዲያ በደህና መጡ!</h1>
     <h2>Welcome to Flega Media</h2>
 
-    <iframe src="./seat.html" width="100%" height="400px" style="border:none;"></iframe>
-
+    <!-- የኢትዮጵያ ዲጂታል ሰዓት ሳጥን -->
+    <div class="ethiopian-clock-box">
+        <div class="clock-time" id="eth-time">00:00:00</div>
+        <div class="clock-date" id="eth-date">ሰዓት በመጫን ላይ...</div>
+    </div>
     
     <p>News, Entertainment, Technology and Digital Tutorials</p>
+    
     <div class="search-container">
-        
-    <a href="#videos" class="button">Explore Now</a>
-        <div class="hero-image-container">
-  <img src="Getnet.png" alt="Computer Training and Digital Skills" class="promo-image">
-</div>
+        <a href="#videos" class="button">Explore Now</a>
+    </div>
 
+    <div class="hero-image-container">
+        <img src="Getnet.png" alt="Computer Training and Digital Skills" class="promo-image">
+    </div>
 </section>
 
 <section class="section" id="videos">
     <h2>Our Content</h2>
 
-    <!-- የካታጎሪ ማጣሪያ (Category Filter) -->
-<div class="category-filter">
-  <button onclick="filterContent('all')">All</button>
-  <button onclick="filterContent('tech')">Technology</button>
-  <button onclick="filterContent('video')">Video Production</button>
-</div>
+    <div class="category-filter">
+        <button onclick="filterContent('all')">All</button>
+        <button onclick="filterContent('tech')">Technology</button>
+        <button onclick="filterContent('video')">Video Production</button>
+    </div>
 
-<!-- የጨለማ ሁነታ መቀየሪያ (Dark Mode Toggle) -->
-<button class="dark-mode-toggle" onclick="toggleDarkMode()">Toggle Dark Mode</button>
+    <button class="dark-mode-toggle" onclick="toggleDarkMode()">Toggle Dark Mode</button>
 
-<!-- የማህበራዊ ሚዲያ ማጋሪያ (Social Share Buttons) -->
-<div class="social-share">
-  <button class="share-btn facebook" onclick="share('facebook')">Share on Facebook</button>
-  <button class="share-btn twitter" onclick="share('twitter')">Share on Twitter</button>
-</div>
+    <div class="social-share">
+        <button class="share-btn facebook" onclick="share('facebook')">Share on Facebook</button>
+        <button class="share-btn twitter" onclick="share('twitter')">Share on Twitter</button>
+    </div>
 
     <div class="cards">
-
         <div class="card">
             <h3>🎥 Videos</h3>
             <p>Watch our latest videos and entertainment content.</p>
@@ -444,30 +86,24 @@ nav a {
             <h3>📰 News</h3>
             <p>Discover interesting news and useful information.</p>
         </div>
-
     </div>
 </section>
 
-<!-- ፕሮፌሽናል የግርጌ (Footer) ክፍል -->
 <footer class="site-footer">
     <div class="footer-container">
-        <!-- ስለ ፍሌጋ ሚዲያ -->
         <div class="footer-section" id="about">
             <h3>About Flega Media</h3>
             <p>Flega Media is a digital media platform sharing technology, entertainment, tutorials and useful information.</p>
         </div>
 
-        <!-- አድራሻ -->
         <div class="footer-section" id="contact">
             <h3>Contact Us</h3>
             <p>Email: darieselam@gmail.com</p>
         </div>
 
-        <!-- የማህበራዊ ሚዲያ አገናኞች -->
         <div class="footer-section social-media">
             <h3>Follow Us</h3>
             <div class="social-icons">
-                <!-- የራስዎን ትክክለኛ ሊንክ በ '#' ቦታ ያስገቡ -->
                 <a href="https://www.youtube.com/@FlegaMedia?sub_confirmation=1" target="_blank" class="social-icon youtube">YouTube</a>
                 <a href="https://t.me/FlegaMedia" target="_blank" class="social-icon telegram">Telegram</a>
                 <a href="https://www.facebook.com/flegafacebook" target="_blank" class="social-icon facebook">Facebook</a>
@@ -476,63 +112,13 @@ nav a {
         </div>
     </div>
 
-    <!-- የቅጂ መብት -->
     <div class="footer-bottom">
         <p>&copy; 2026 Flega Media. All Rights Reserved.</p>
     </div>
 </footer>
 
-    <script>
-const searchInput = document.querySelector('.search-container input');
-const cards = document.querySelectorAll('.card');
-
-searchInput.addEventListener('input', () => {
-  const searchTerm = searchInput.value.toLowerCase();
-  cards.forEach(card => {
-    const title = card.querySelector('h3').textContent.toLowerCase();
-    const text = card.querySelector('p').textContent.toLowerCase();
-    if (title.includes(searchTerm) || text.includes(searchTerm)) {
-      card.style.display = 'block';
-    } else {
-      card.style.display = 'none';
-    }
-  });
-});
-</script>
-
-<script>
-  // 1. የጨለማ ሁነታን ለመቀያየር (Dark Mode Toggle)
-  function toggleDarkMode() {
-    document.body.classList.toggle('dark-mode');
-  }
-
-  // 2. የማህበራዊ ሚዲያ ማጋሪያ (Social Share)
-  function share(platform) {
-    const currentUrl = encodeURIComponent(window.location.href);
-    if (platform === 'facebook') {
-      window.open(`https://www.facebook.com/sharer/sharer.php?u=${currentUrl}`, '_blank');
-    } else if (platform === 'twitter') {
-      window.open(`https://twitter.com/intent/tweet?url=${currentUrl}`, '_blank');
-    }
-  }
-
-  // 3. የካታጎሪ ማጣሪያ (Category Filter)
-  function filterContent(category) {
-    const cards = document.querySelectorAll('.card'); // ይዘት ያላቸውን ካርዶች ይመርጣል
-    cards.forEach(card => {
-      if (category === 'all') {
-        card.style.display = 'block'; // ሁሉንም ያሳያል
-      } else {
-        // ይህ በትክክል እንዲሰራ በኤችቲኤምኤል ላይ ለእያንዳንዱ .card ክላስ ተጨማሪ ስም (ለምሳሌ class="card tech") መስጠት ያስፈልጋል
-        if (card.classList.contains(category)) {
-          card.style.display = 'block';
-        } else {
-          card.style.display = 'none'; // ያልተመረጡትን ይደብቃል
-        }
-      }
-    });
-  }
-</script>
+<!-- የ JavaScript ፋይል ማገናኛ -->
+<script src="script.js"></script>
 
 </body>
 </html>
