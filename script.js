@@ -19,7 +19,6 @@ function updateEthiopianClock() {
     document.getElementById("eth-time").innerText = timeStr;
 
     // የኢትዮጵያ ቀን ቆጠራ መነሻ (ዛሬ መስከረም 25፣ 2019 ዓ.ም.)
-    // ከዚህ በታች ያለው ስሌት የስርዓቱን ቀን በመጠቀም ከዛሬው መነሻ ጀምሮ ቀናቱ እንዲቀጥሉ ያደርጋል
     const startDate = new Date('2026-10-05'); // የዛሬው የግሪጎሪያን ቀን መነሻ
     const startEthDay = 25;
     const startEthMonth = "መስከረም";
