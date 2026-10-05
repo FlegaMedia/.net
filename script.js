@@ -22,7 +22,7 @@ function updateEthiopianClock() {
     let currentMonthName = "መስከረም";
     let currentYear = 2019;
 
-    document.getElementById("eth-date").innerText = `${currentMonthName} ${day}፣ ${currentYear} ዓ.ም.`;
+    document.getElementById("eth-date").innerText = `${currentMonthName} ${day}፣ ${currentYear} ዓ.ም`;
 }
 
 // ሰዓቱን በየ 1 ሰከንድ ማደስ
