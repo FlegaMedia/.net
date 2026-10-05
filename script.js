@@ -41,6 +41,7 @@ searchInput.addEventListener('input', () => {
     const text = card.querySelector('p').textContent.toLowerCase();
     if (title.includes(searchTerm) || text.includes(searchTerm)) {
       card.style.display = 'block';
+        card.scrollIntoView({ behavior: 'smooth' });
     } else {
       card.style.display = 'none';
     }
