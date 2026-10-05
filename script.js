@@ -1,4 +1,4 @@
-// 1. የኢትዮጵያ ዲጂታል ሰዓት እና ቀን ማስኬጃ
+// 1. የኢትዮጵያ ዲጂታል ሰዓት እና ቀን ማስኬጃ (ከትክክለኛ መነሻ ጋር)
 function updateEthiopianClock() {
     const now = new Date();
 
@@ -18,12 +18,27 @@ function updateEthiopianClock() {
     let timeStr = `${displayHours}:${displayMinutes}:${displaySeconds}`;
     document.getElementById("eth-time").innerText = timeStr;
 
-    // እዚህ ላይ በቀጥታ ከኮምፒዩተሩ ቀን በመውሰድ በራሱ እንዲቀየር ተደርጓል (ወይም ትክክለኛውን ቀን እዚህ ቁጥር ላይ ማስተካከል ይቻላል)
-    let day = now.getDate(); // ከዚህ ቀደም ከነበረው 25.getDate() ስህተት ታርሟል
-    let currentMonthName = "መስከረም";
-    let currentYear = 2019;
+    // የኢትዮጵያ ቀን ቆጠራ መነሻ (ዛሬ መስከረም 25፣ 2019 ዓ.ም.)
+    // ከዚህ በታች ያለው ስሌት የስርዓቱን ቀን በመጠቀም ከዛሬው መነሻ ጀምሮ ቀናቱ እንዲቀጥሉ ያደርጋል
+    const startDate = new Date('2026-10-05'); // የዛሬው የግሪጎሪያን ቀን መነሻ
+    const startEthDay = 25;
+    const startEthMonth = "መስከረም";
+    const startEthYear = 2019;
 
-    document.getElementById("eth-date").innerText = `${currentMonthName} ${day}፣ ${currentYear} ዓ.ም`;
+    let timeDiff = now.getTime() - startDate.getTime();
+    let dayDiff = Math.floor(timeDiff / (1000 * 3600 * 24));
+    
+    let currentDay = startEthDay + dayDiff;
+    let currentMonthName = startEthMonth;
+    let currentYear = startEthYear;
+
+    // ቀላል ወር ማሻገር (የመስከረም 30 ቀናት ሲያልቁ ወደ ጥቅምት እንዲሸጋገር)
+    if (currentDay > 30) {
+        currentDay = currentDay - 30;
+        currentMonthName = "ጥቅምት";
+    }
+
+    document.getElementById("eth-date").innerText = `${currentMonthName} ${currentDay} ፥ ${currentYear} ዓ.ም`;
 }
 
 // ሰዓቱን በየ 1 ሰከንድ ማደስ
