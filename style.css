@@ -13,7 +13,7 @@ body {
 /* የኢትዮጵያ ሰዓት ሳጥን ዲዛይን */
 .ethiopian-clock-box {
     background: #1e1e1e;
-    padding: 10px 25px;
+    padding: 10px 10px;
     margin: 20px auto;
     display: inline-block; /* ሳጥኑ በይዘቱ ልክ እንዲቀነስ ያደርጋል */
     border-radius: 12px;
