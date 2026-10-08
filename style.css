@@ -135,7 +135,7 @@ body.dark-mode .footer-container {
 }
 
 header {
-    background-image: url('Banner.png');
+    background-image: url('images/Banner.png');
     background-size: contain;
     background-repeat: no-repeat;
     background-position: top;
