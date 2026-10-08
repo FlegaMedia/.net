@@ -3,15 +3,48 @@
     margin: 0;
     padding: 0;
 }
-/*home icon style*/
-.material-symbols-outlined {
-  font-variation-settings:
-  'FILL' 0,
-  'wght' 400,
-  'GRAD' 0,
-  'opsz' 24
+/* icon style*/
+/* የግራውን ሜኑ አጠቃላይ አቀማመጥ */
+.sidebar-menu {
+  display: flex;
+  flex-direction: column; /* ከላይ ወደ ታች እንዲደረደሩ */
+  width: 250px;
+  background-color: #fafafa;
+  padding: 20px 10px;
+  gap: 10px; /* በሜኑዎች መካከል ያለው ክፍተት */
 }
 
+/* የእያንዳንዱ ሜኑ ቅርጽ እና አቀማመጥ */
+.sidebar-menu .nav-item {
+  display: flex;
+  align-items: center;
+  gap: 12px; /* ከአዶው እና ከጽሑፍ መካከል ያለው ክፍተት */
+  padding: 12px 16px;
+  text-decoration: none;
+  color: #333333;
+  font-family: sans-serif;
+  font-size: 16px;
+  border-radius: 8px;
+  transition: background 0.3s;
+}
+
+/* አይን የሚስብ ገጽታ (ልክ እንደ Payments ያለው የተመረጠው ከለር) */
+.sidebar-menu .active-payment {
+  background-color: #00897b; /* የቲል (Teal) ከለር */
+  color: #ffffff;
+}
+
+.sidebar-menu .active-payment .material-symbols-outlined {
+  color: #ffffff;
+}
+
+/* አይጥ ሲያሳልፉበት (Hover) የሚኖረው ገጽታ */
+.sidebar-menu .nav-item:hover {
+  background-color: #eeeeee;
+}
+
+
+/*የሜኑ መጨረሻ*/
 body {
     font-family: Arial, sans-serif;
     background: #f5f5f5;
