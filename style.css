@@ -3,22 +3,23 @@
     margin: 0;
     padding: 0;
 }
-/* icon style*/
 /* የግራውን ሜኑ አጠቃላይ አቀማመጥ */
 .sidebar-menu {
   display: flex;
-  flex-direction: column; /* ከላይ ወደ ታች እንዲደረደሩ */
+  flex-direction: column; /* ንጥሎቹ ከላይ ወደ ታች በአንድ አምድ (Column) እንዲሰለፉ ያደርጋል */
+  height: 100%;
   width: 250px;
   background-color: #fafafa;
   padding: 20px 10px;
-  gap: 10px; /* በሜኑዎች መካከል ያለው ክፍተት */
+  box-sizing: border-box;
+  gap: 8px; /* በሜኑዎች መካከል ያለው ክፍተት */
 }
 
 /* የእያንዳንዱ ሜኑ ቅርጽ እና አቀማመጥ */
 .sidebar-menu .nav-item {
   display: flex;
   align-items: center;
-  gap: 12px;/* ከአዶው እና ከጽሑፍ መካከል ያለው ክፍተት */
+  gap: 12px; /* ከአዶው እና ከጽሑፍ መካከል ያለው ክፍተት */
   padding: 12px 16px;
   text-decoration: none;
   color: #333333;
@@ -28,9 +29,9 @@
   transition: background 0.3s;
 }
 
-/*አይን የሚስብ ገጽታ (ልክ እንደ Payments ያለው የተመረጠው ከለር)*/
+/* አይን የሚስብ ገጽታ (ልክ እንደ Payments ያለው የተመረጠው ከለር) */
 .sidebar-menu .active-payment {
-  background-color: #00897b;/* የቲል (Teal) ከለር */
+  background-color: #00897b; /* የቲል (Teal) ከለር */
   color: #ffffff;
 }
 
@@ -43,10 +44,14 @@
   background-color: #eeeeee;
 }
 
+/* የግርጌው ክፍል (Help እና Logout) */
 .sidebar-footer {
   margin-top: auto;
-  padding: 20px 10px;
+  padding: 10px 0;
   border-top: 1px solid #ddd;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 
 .sidebar-footer .sidebar-item {
@@ -66,17 +71,6 @@
   background-color: #eeeeee;
 }
 
-
-.sidebar-menu {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  width: 250px;
-  background-color: #fafafa;
-  padding: 20px 10px;
-  box-sizing: border-box;
-  gap: 8px; /* የንጥሎችን እርስ በርስ ርቀት መቀነሻ (ለምሳሌ 8px ወይም 5px ማድረግ ይቻላል) */
-}
 
 
 
