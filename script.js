@@ -3,7 +3,6 @@
 const toggleBtn = document.getElementById('menu-toggle-btn');
 const sidebarMenu = document.getElementById('sidebarMenu');
 
-// አሁን ከሳይድባር ውስጥ ያለው "Profile" ሊንክ የሚቀመጥበት መነሻ
 const profileTrigger = document.getElementById('profile-trigger');
 const profileDropdown = document.getElementById('profileDropdown');
 
@@ -17,7 +16,7 @@ toggleBtn.addEventListener('click', (e) => {
   }
 });
 
-// በሳይድባር ውስጥ ያለውን "Profile" ሲጫኑ የድሮፕዳውን ሜኑ እንዲመጣ/እንዲጠፋ
+// በሳይድባር ውስጥ "Profile" ሲጫኑ የድሮፕዳውን ሜኑ እንዲመጣ/እንዲጠፋ
 profileTrigger.addEventListener('click', (e) => {
   e.preventDefault(); // ሊንኩ ወደሌላ ቦታ እንዳይወስድ ይከላከላል
   e.stopPropagation();
