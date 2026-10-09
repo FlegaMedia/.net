@@ -20,53 +20,45 @@
 <body>
 
 <header>
+  <!-- የሜኑ ማብሪያ/መጥፊያ አዶ (Button) -->
+  <button id="menu-toggle-btn" class="menu-icon">☰</button>
 
+  <!-- የሳይድባር ሜኑ (በነባሪ እንዲደበቅ hidden ክላስ ተሰጥቶታል) -->
+  <nav class="sidebar-menu hidden" id="sidebarMenu">
+    <a href="#" class="nav-item active-dashboard">
+      <span class="material-symbols-outlined">dashboard</span>
+      <span>Dashboard</span>
+    </a>
+    <a href="#" class="nav-item">
+      <span class="material-symbols-outlined">work</span>
+      <span>Projects</span>
+    </a>
+    <a href="#" class="nav-item active-payment">
+      <span class="material-symbols-outlined">payments</span>
+      <span>Payments</span>
+    </a>
+    <a href="#" class="nav-item">
+      <span class="material-symbols-outlined">account_circle</span>
+      <span>Profile</span>
+    </a>
+    <a href="#" class="nav-item">
+      <span class="material-symbols-outlined">schedule</span>
+      <span>My work hours</span>
+    </a>
 
-<input type="checkbox" id="menu-toggle">
-<label for="menu-toggle" class="menu-icon">☰</label>
-
-
-
-    <nav class="sidebar-menu">
-  <a href="#" class="nav-item active-dashboard">
-    <span class="material-symbols-outlined">dashboard</span>
-    <span>Dashboard</span>
-  </a>
-  <a href="#" class="nav-item">
-    <span class="material-symbols-outlined">work</span>
-    <span>Projects</span>
-  </a>
-  <a href="#" class="nav-item active-payment">
-    <span class="material-symbols-outlined">payments</span>
-    <span>Payments</span>
-  </a>
-  <a href="#" class="nav-item">
-    <span class="material-symbols-outlined">account_circle</span>
-    <span>Profile</span>
-  </a>
-  <a href="#" class="nav-item">
-    <span class="material-symbols-outlined">schedule</span>
-    <span>My work hours</span>
-  </a>
-
-<div class="sidebar-footer">
-  <a href="#" class="sidebar-item">
-    <span class="material-symbols-outlined">help</span>
-    Help
-  </a>
-  <a href="#" class="sidebar-item">
-    <span class="material-symbols-outlined">logout</span>
-    Logout
-  </a>
-</div>
-
-        
-</nav>
-
-
-
-    
+    <div class="sidebar-footer">
+      <a href="#" class="sidebar-item">
+        <span class="material-symbols-outlined">help</span>
+        Help
+      </a>
+      <a href="#" class="sidebar-item">
+        <span class="material-symbols-outlined">logout</span>
+        Logout
+      </a>
+    </div>
+  </nav>
 </header>
+
 
 <nav>
     <a href="#videos">Videos</a>
