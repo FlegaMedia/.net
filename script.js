@@ -3,7 +3,8 @@
 const toggleBtn = document.getElementById('menu-toggle-btn');
 const sidebarMenu = document.getElementById('sidebarMenu');
 
-const profileBtn = document.getElementById('profile-btn');
+// አሁን ከሳይድባር ውስጥ ያለው "Profile" ሊንክ የሚቀመጥበት መነሻ
+const profileTrigger = document.getElementById('profile-trigger');
 const profileDropdown = document.getElementById('profileDropdown');
 
 // የሜኑ አዶውን ሲጫኑ ሳይድባር ሜኑው እንዲመጣ/እንዲጠፋ
@@ -16,14 +17,16 @@ toggleBtn.addEventListener('click', (e) => {
   }
 });
 
-// የፕሮፋይል አዝራሩን ሲጫኑ የድሮፕዳውን ሜኑ እንዲመጣ/እንዲጠፋ
-profileBtn.addEventListener('click', (e) => {
+// በሳይድባር ውስጥ ያለውን "Profile" ሲጫኑ የድሮፕዳውን ሜኑ እንዲመጣ/እንዲጠፋ
+profileTrigger.addEventListener('click', (e) => {
+  e.preventDefault(); // ሊንኩ ወደሌላ ቦታ እንዳይወስድ ይከላከላል
   e.stopPropagation();
   profileDropdown.classList.toggle('hidden');
-  // የሳይድባር ሜኑ ክፍት ከሆነ እንዲዘጋ
-  if (!sidebarMenu.classList.contains('hidden')) {
-    sidebarMenu.classList.add('hidden');
-  }
+  
+  // የሳይድባር ሜኑ ክፍት ከሆነ እንዲዘጋ (አስፈላጊ ሆኖ ከታየ)
+  // if (!sidebarMenu.classList.contains('hidden')) {
+  //   sidebarMenu.classList.add('hidden');
+  // }
 });
 
 // ከሜኑዎቹ ውጭ ሌላ ቦታ ሲጫን ሁለቱም እንዲዘጉ
@@ -57,8 +60,8 @@ function updateEthiopianClock() {
     let timeStr = `${displayHours}:${displayMinutes}:${displaySeconds}`;
     document.getElementById("eth-time").innerText = timeStr;
 
-    // የኢትዮጵያ ቀን ቆጠራ መነሻ (ዛሬ መስከረም 25፣ 2019 ዓ.ም.)
-    const startDate = new Date('2026-10-05'); // የዛሬው የግሪጎሪያን ቀን መነሻ
+    // የኢትዮጵያ ቀን ቆጠራ መነሻ
+    const startDate = new Date('2026-10-05'); 
     const startEthDay = 25;
     const startEthMonth = "መስከረም";
     const startEthYear = 2019;
@@ -70,7 +73,6 @@ function updateEthiopianClock() {
     let currentMonthName = startEthMonth;
     let currentYear = startEthYear;
 
-    // ቀላል ወር ማሻገር (የመስከረም 30 ቀናት ሲያልቁ ወደ ጥቅምት እንዲሸጋገር)
     if (currentDay > 30) {
         currentDay = currentDay - 30;
         currentMonthName = "ጥቅምት";
