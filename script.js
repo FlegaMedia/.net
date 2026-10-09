@@ -1,10 +1,41 @@
+/*የሴቲንግ*/
+
 const toggleBtn = document.getElementById('menu-toggle-btn');
 const sidebarMenu = document.getElementById('sidebarMenu');
 
-toggleBtn.addEventListener('click', () => {
-  // 'hidden' የሚለውን ክላስ በክሊክ ሰዓት ይቀያይረዋል (ሲኖር ያጠፋል፣ ከሌለ ይጨምራል)
+const profileBtn = document.getElementById('profile-btn');
+const profileDropdown = document.getElementById('profileDropdown');
+
+// የሜኑ አዶውን ሲጫኑ ሳይድባር ሜኑው እንዲመጣ/እንዲጠፋ
+toggleBtn.addEventListener('click', (e) => {
+  e.stopPropagation();
   sidebarMenu.classList.toggle('hidden');
+  // የፕሮፋይል ሜኑ ክፍት ከሆነ እንዲዘጋ
+  if (!profileDropdown.classList.contains('hidden')) {
+    profileDropdown.classList.add('hidden');
+  }
 });
+
+// የፕሮፋይል አዝራሩን ሲጫኑ የድሮፕዳውን ሜኑ እንዲመጣ/እንዲጠፋ
+profileBtn.addEventListener('click', (e) => {
+  e.stopPropagation();
+  profileDropdown.classList.toggle('hidden');
+  // የሳይድባር ሜኑ ክፍት ከሆነ እንዲዘጋ
+  if (!sidebarMenu.classList.contains('hidden')) {
+    sidebarMenu.classList.add('hidden');
+  }
+});
+
+// ከሜኑዎቹ ውጭ ሌላ ቦታ ሲጫን ሁለቱም እንዲዘጉ
+window.addEventListener('click', () => {
+  if (!sidebarMenu.classList.contains('hidden')) {
+    sidebarMenu.classList.add('hidden');
+  }
+  if (!profileDropdown.classList.contains('hidden')) {
+    profileDropdown.classList.add('hidden');
+  }
+});
+
 
 // 1. የኢትዮጵያ ዲጂታል ሰዓት እና ቀን ማስኬጃ (ከትክክለኛ መነሻ ጋር)
 function updateEthiopianClock() {
