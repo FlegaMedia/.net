@@ -19,7 +19,7 @@
   display: none;
 }
 
-/* የሳይድባር ዋናው አቀማመጥ (በይዘቱ ልክ እና ክፍተቱ ጠብቦ እንዲሆን) */
+/* የሳይድባር ዋናው አቀማመጥ */
 .sidebar-menu {
   display: flex;
   flex-direction: column;
@@ -32,7 +32,7 @@
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* የእያንዳንዱ ንጥል (Row) አቀማመጥ እና የሰለጠነ ክፍተት */
+/* የንጥሎቹ አጠቃላይ መልክ (ሌሎች ቀለሞች ነጭ/መደበኛ እንዲሆኑ) */
 .sidebar-menu .nav-item,
 .sidebar-footer .sidebar-item {
   display: flex;
@@ -40,24 +40,25 @@
   gap: 8px;
   padding: 6px 12px;
   text-decoration: none;
-  color: #333333;
+  color: #333333; /* የጽሁፍ ከለር */
   font-family: sans-serif;
   font-size: 15px;
   border-radius: 6px;
   width: fit-content;
   transition: background 0.3s;
+  background-color: transparent; /* ከውጭ ያሉት ባክግራውንድ የላቸውም */
 }
 
-/* አይጥ ሲያሳልፉበት (Hover) */
+/* አይጥ ሲያሳልፉበት (Hover) የሚኖረው ቀላል ከለር */
 .sidebar-menu .nav-item:hover,
 .sidebar-footer .sidebar-item:hover {
   background-color: #eeeeee;
 }
 
-/* የተመረጡ ንጥሎች ከለር (Active) */
+/* የተመረጠው ንጥል ብቻ (Cold Color - Teal) እና የውስጡ ጽሁፍ/አዶ ነጭ እንዲሆን */
 .sidebar-menu .active-dashboard,
 .sidebar-menu .active-payment {
-  background-color: #00897b;
+  background-color: #00897b; /* የቀዝቃዛ ከለር (Cold Color) */
   color: #ffffff;
 }
 
