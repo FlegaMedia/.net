@@ -14,11 +14,11 @@
   gap: 10px; /* በሜኑዎች መካከል ያለው ክፍተት */
 }
 
-/* የእያንዳንዱ ሜኑ ቅርጽ እና አቀማመጥ */
+/* የእያንዳንዱ ሜኑ ቅርጽ እና አቀማመጥ 
 .sidebar-menu .nav-item {
   display: flex;
   align-items: center;
-  gap: 12px; /* ከአዶው እና ከጽሑፍ መካከል ያለው ክፍተት */
+  gap: 12px; ከአዶው እና ከጽሑፍ መካከል ያለው ክፍተት 
   padding: 12px 16px;
   text-decoration: none;
   color: #333333;
@@ -28,9 +28,9 @@
   transition: background 0.3s;
 }
 
-/* አይን የሚስብ ገጽታ (ልክ እንደ Payments ያለው የተመረጠው ከለር) */
+አይን የሚስብ ገጽታ (ልክ እንደ Payments ያለው የተመረጠው ከለር) 
 .sidebar-menu .active-payment {
-  background-color: #00897b; /* የቲል (Teal) ከለር */
+  background-color: #00897b; የቲል (Teal) ከለር 
   color: #ffffff;
 }
 
@@ -38,13 +38,13 @@
   color: #ffffff;
 }
 
-/* አይጥ ሲያሳልፉበት (Hover) የሚኖረው ገጽታ */
+ አይጥ ሲያሳልፉበት (Hover) የሚኖረው ገጽታ 
 .sidebar-menu .nav-item:hover {
   background-color: #eeeeee;
 }
 
 
-/*የሜኑ መጨረሻ*/
+የሜኑ መጨረሻ*/
 body {
     font-family: Arial, sans-serif;
     background: #f5f5f5;
@@ -174,6 +174,13 @@ body.dark-mode .footer-container {
   border: none !important;
   margin: 0 !important;
 }
+/*የሜኑ እስታይል*/
+
+#menu-toggle { display: none; }
+#menu-toggle:checked ~ .sidebar-menu { display: flex; }
+.menu-icon { font-size: 30px; cursor: pointer; display: block; padding: 10px; }
+
+
 
 header {
     background-image: url('images/Banner.png');
