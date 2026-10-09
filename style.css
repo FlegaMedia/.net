@@ -18,7 +18,7 @@
 .sidebar-menu .nav-item {
   display: flex;
   align-items: center;
-  gap: 12px; ከአዶው እና ከጽሑፍ መካከል ያለው ክፍተት 
+  gap: 12px;/* ከአዶው እና ከጽሑፍ መካከል ያለው ክፍተት */
   padding: 12px 16px;
   text-decoration: none;
   color: #333333;
@@ -28,9 +28,9 @@
   transition: background 0.3s;
 }
 
-አይን የሚስብ ገጽታ (ልክ እንደ Payments ያለው የተመረጠው ከለር) 
+/*አይን የሚስብ ገጽታ (ልክ እንደ Payments ያለው የተመረጠው ከለር)*/
 .sidebar-menu .active-payment {
-  background-color: #00897b; የቲል (Teal) ከለር 
+  background-color: #00897b;/* የቲል (Teal) ከለር */
   color: #ffffff;
 }
 
@@ -38,7 +38,7 @@
   color: #ffffff;
 }
 
- አይጥ ሲያሳልፉበት (Hover) የሚኖረው ገጽታ 
+/* አይጥ ሲያሳልፉበት (Hover) የሚኖረው ገጽታ */
 .sidebar-menu .nav-item:hover {
   background-color: #eeeeee;
 }
