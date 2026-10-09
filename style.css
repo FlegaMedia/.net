@@ -66,14 +66,16 @@
   background-color: #eeeeee;
 }
 
+
 .sidebar-menu {
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  height: 100%;
   width: 250px;
   background-color: #fafafa;
   padding: 20px 10px;
-  /* margin-top: 20px; ውጪውን ክፍተት ለማስተካከል ይህንን ማጥፋት ይመረጣል */
+  box-sizing: border-box;
+  gap: 8px; /* የንጥሎችን እርስ በርስ ርቀት መቀነሻ (ለምሳሌ 8px ወይም 5px ማድረግ ይቻላል) */
 }
 
 
