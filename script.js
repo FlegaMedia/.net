@@ -1,3 +1,11 @@
+const toggleBtn = document.getElementById('menu-toggle-btn');
+const sidebarMenu = document.getElementById('sidebarMenu');
+
+toggleBtn.addEventListener('click', () => {
+  // 'hidden' የሚለውን ክላስ በክሊክ ሰዓት ይቀያይረዋል (ሲኖር ያጠፋል፣ ከሌለ ይጨምራል)
+  sidebarMenu.classList.toggle('hidden');
+});
+
 // 1. የኢትዮጵያ ዲጂታል ሰዓት እና ቀን ማስኬጃ (ከትክክለኛ መነሻ ጋር)
 function updateEthiopianClock() {
     const now = new Date();
