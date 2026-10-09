@@ -19,11 +19,12 @@
 
 <body>
 
+
 <header>
-  <!-- የሜኑ ማብሪያ/መጥፊያ አዶ (Button) -->
+  <!-- የሜኑ ማብሪያ/መጥፊያ አዶ -->
   <button id="menu-toggle-btn" class="menu-icon">☰</button>
 
-  <!-- የሳይድባር ሜኑ (በነባሪ እንዲደበቅ hidden ክላስ ተሰጥቶታል) -->
+  <!-- የሳይድባር ሜኑ -->
   <nav class="sidebar-menu hidden" id="sidebarMenu">
     <a href="#" class="nav-item active-dashboard">
       <span class="material-symbols-outlined">dashboard</span>
@@ -37,10 +38,27 @@
       <span class="material-symbols-outlined">payments</span>
       <span>Payments</span>
     </a>
-    <a href="#" class="nav-item">
-      <span class="material-symbols-outlined">account_circle</span>
-      <span>Profile</span>
-    </a>
+
+    <!-- Profile ንጥል እና ድሮፕዳውን ሜኑ የሚይዘው ዎችፐር -->
+    <div class="profile-wrapper">
+      <a href="#" class="nav-item" id="profile-trigger">
+        <span class="material-symbols-outlined">account_circle</span>
+        <span>Profile</span>
+      </a>
+
+      <!-- Profile ሲነካ የሚወጣው ድሮፕዳውን -->
+      <div class="profile-dropdown hidden" id="profileDropdown">
+        <a href="#" class="dropdown-item">
+          <span>Profile settings</span>
+          <span class="material-symbols-outlined">person</span>
+        </a>
+        <a href="#" class="dropdown-item">
+          <span>Account settings</span>
+          <span class="material-symbols-outlined">settings</span>
+        </a>
+      </div>
+    </div>
+
     <a href="#" class="nav-item">
       <span class="material-symbols-outlined">schedule</span>
       <span>My work hours</span>
@@ -57,25 +75,6 @@
       </a>
     </div>
   </nav>
-
-  <!-- የፕሮፋይል አዝራር እና ድሮፕዳውን ሜኑ (እዚህ ጋር ተጨምሯል) -->
-  <div class="profile-container">
-    <button id="profile-btn" class="profile-btn">
-      <div class="profile-avatar">D</div>
-      <span class="material-symbols-outlined">expand_more</span>
-    </button>
-
-    <div class="profile-dropdown hidden" id="profileDropdown">
-      <a href="#" class="dropdown-item">
-        <span>Profile settings</span>
-        <span class="material-symbols-outlined">person</span>
-      </a>
-      <a href="#" class="dropdown-item">
-        <span>Account settings</span>
-        <span class="material-symbols-outlined">settings</span>
-      </a>
-    </div>
-  </div>
 </header>
 
 
