@@ -14,7 +14,7 @@
   gap: 10px; /* በሜኑዎች መካከል ያለው ክፍተት */
 }
 
-/* የእያንዳንዱ ሜኑ ቅርጽ እና አቀማመጥ 
+/* የእያንዳንዱ ሜኑ ቅርጽ እና አቀማመጥ */
 .sidebar-menu .nav-item {
   display: flex;
   align-items: center;
@@ -44,7 +44,7 @@
 }
 
 
-የሜኑ መጨረሻ*/
+/*የሜኑ መጨረሻ*/
 body {
     font-family: Arial, sans-serif;
     background: #f5f5f5;
