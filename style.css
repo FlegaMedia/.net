@@ -4,57 +4,36 @@
     padding: 0;
 }
 /* የግራውን ሜኑ አጠቃላይ አቀማመጥ */
+/* የሜኑ አዶው መልክ */
+.menu-icon {
+  font-size: 24px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 10px;
+  display: inline-block;
+}
+
+/* ሜኑው ተደብቆ እንዲቆይ የሚያደርግ ክላስ */
+.sidebar-menu.hidden {
+  display: none;
+}
+
+/* የሳይድባር ዋናው አቀማመጥ (በይዘቱ ልክ እንዲሆን) */
 .sidebar-menu {
   display: flex;
   flex-direction: column;
-  width: max-content; /* ስፋቱ እንደ ይዘቱ (content) መጠን ብቻ እንዲሆን */
+  width: max-content;
   background-color: #fafafa;
   padding: 20px 10px;
   box-sizing: border-box;
   gap: 8px;
-}
-
-/* የእያንዳንዱ ሜኑ ቅርጽ እና አቀማመጥ */
-.sidebar-menu .nav-item {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  padding: 12px 16px;
-  text-decoration: none;
-  color: #333333;
-  font-family: sans-serif;
-  font-size: 16px;
   border-radius: 8px;
-  width: fit-content; /* የባክግራውንድ መጠኑ በይዘቱ ልክ ብቻ እንዲሆን */
-  transition: background 0.3s;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* የተመረጠው ሜኑ ከለር (Active) */
-.sidebar-menu .active-payment {
-  background-color: #00897b;
-  color: #ffffff;
-}
-
-.sidebar-menu .active-payment .material-symbols-outlined {
-  color: #ffffff;
-}
-
-/* አይጥ ሲያሳልፉበት (Hover) የሚኖረው ገጽታ */
-.sidebar-menu .nav-item:hover {
-  background-color: #eeeeee;
-}
-
-/* የግርጌው ክፍል (Help እና Logout በአንድ አምድ ስር) */
-.sidebar-footer {
-  margin-top: 10px;
-  padding-top: 10px;
-  border-top: 1px solid #ddd;
-  display: flex;
-  flex-direction: column; /* በአንድ አምድ (Column) እንዲሰለፉ */
-  gap: 8px;
-  width: fit-content;
-}
-
+/* የሜኑ ንጥሎች አቀማመጥ */
+.sidebar-menu .nav-item,
 .sidebar-footer .sidebar-item {
   display: flex;
   align-items: center;
@@ -65,14 +44,38 @@
   font-family: sans-serif;
   font-size: 16px;
   border-radius: 8px;
-  width: fit-content; /* የባክግራውንድ መጠኑ በይዘቱ ልክ እንዲሆን */
+  width: fit-content;
   transition: background 0.3s;
 }
 
+/* አይጥ ሲያሳልፉበት (Hover) */
+.sidebar-menu .nav-item:hover,
 .sidebar-footer .sidebar-item:hover {
   background-color: #eeeeee;
 }
 
+/* የተመረጡ ንጥሎች ከለር (Active) */
+.sidebar-menu .active-dashboard,
+.sidebar-menu .active-payment {
+  background-color: #00897b;
+  color: #ffffff;
+}
+
+.sidebar-menu .active-dashboard .material-symbols-outlined,
+.sidebar-menu .active-payment .material-symbols-outlined {
+  color: #ffffff;
+}
+
+/* የግርጌው ክፍል (Help እና Logout) */
+.sidebar-footer {
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid #ddd;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: fit-content;
+}
 
 
 
