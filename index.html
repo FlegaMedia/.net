@@ -129,6 +129,716 @@
 
 
     
+
+<p>      እሺ። ከዚህ በፊት የዘረዘርነውን አሁን ወደ HTML + CSS + JavaScript የተሟላ የጥናት መዝገበ-ቃላት እናሳድገዋለን። የእያንዳንዱን Tag፣ Attribute፣ Property፣ Method እና Keyword ስም ከአገልግሎቱ ጋር እንዘረዝራለን።
+
+አንድ ልዩነት አስታውስ፦ HTML የTags ዝርዝር አለው፤ CSS የProperties እና Selectors ዝርዝር አለው፤ JavaScript ደግሞ Keywords፣ Operators፣ Built-in Objects፣ Methods እና APIs አሉት። የWeb መስፈርቶች ሲዘምኑ ዝርዝሮቹም ሊለወጡ ይችላሉ።
+
+### ክፍል 1፦ HTML መዝገበ-ቃላት
+
+### 1\. የHTML መዋቅርና Metadata
+
+| Tag / ቃል        | ትርጉም                                         |
+| --------------- | -------------------------------------------- |
+| <!DOCTYPE html> | ሰነዱ HTML5 እንደሆነ ያሳውቃል                        |
+| <html>          | የHTML ሰነድ ዋና ኤለመንት                           |
+| <head>          | የገጹ ቅንብሮችና Metadata                          |
+| <title>         | የBrowser Tab ርዕስ                             |
+| <meta>          | Charset፣ Description፣ Viewport ወዘተ           |
+| <link>          | ውጫዊ CSS ወይም ሌላ Resource ማገናኛ                 |
+| <style>         | CSS በHTML ውስጥ ለመጻፍ                           |
+| <body>          | የገጹ ዋና የሚታይ ይዘት                              |
+| <base>          | ለRelative URLs መሠረታዊ URL ለመወሰን               |
+| lang            | የገጹን ቋንቋ መግለጽ                                |
+| charset         | የጽሑፍ ኢንኮዲንግ፤ ብዙውን ጊዜ UTF-8                   |
+| viewport        | በስልክና በሌሎች ስክሪኖች ላይ የገጽ ስፋት መቆጣጠር            |
+| description     | የገጹን አጭር ማብራሪያ                               |
+| favicon         | በBrowser Tab ላይ የሚታይ ትንሽ ምልክት፤ በ<link> ይገለጻል |
+
+### 2\. የጽሑፍና Inline Tags
+
+| Tag          | ትርጉም                       |
+| ------------ | -------------------------- |
+| <h1>–<h6>    | የርዕስ ደረጃዎች                 |
+| <p>          | አንቀጽ                       |
+| <div>        | Block የይዘት መያዣ             |
+| <span>       | Inline የይዘት መያዣ            |
+| <br>         | የመስመር መቀየሪያ                |
+| <hr>         | የርዕስ ወይም የጭብጥ መለያ          |
+| <strong>     | አስፈላጊ ጽሑፍ                  |
+| <b>          | ወፍራም ጽሑፍ                   |
+| <em>         | አጽንኦት                      |
+| <i>          | የተጋደመ ጽሑፍ                  |
+| <u>          | ከታች መስመር                   |
+| <s>          | ከእንግዲህ ትክክል ያልሆነ ጽሑፍ       |
+| <del>        | የተሰረዘ ጽሑፍ                  |
+| <ins>        | የተጨመረ ጽሑፍ                  |
+| <mark>       | የተደምቀ ጽሑፍ                  |
+| <small>      | ትንሽ ጽሑፍ                    |
+| <sub>        | ከመሠረቱ በታች የሚቀመጥ ጽሑፍ        |
+| <sup>        | ከመሠረቱ በላይ የሚቀመጥ ጽሑፍ        |
+| <abbr>       | ምህጻረ ቃል                    |
+| <cite>       | የሥራ ወይም የፈጠራ ሥራ ርዕስ        |
+| <q>          | አጭር ጥቅስ                    |
+| <blockquote> | ረዥም ጥቅስ                    |
+| <code>       | የኮድ ጽሑፍ                    |
+| <pre>        | የተጻፈውን ክፍተትና መስመር ጠብቆ ማሳየት |
+| <kbd>        | የKeyboard ግቤት              |
+| <samp>       | የፕሮግራም ውጤት ምሳሌ             |
+| <var>        | ተለዋዋጭ ለማሳየት                |
+| <wbr>        | ቃል ሊሰበርበት የሚችል ቦታ          |
+
+### 3\. Links፣ Images እና Embedded Content
+
+| Tag          | ትርጉም                          |
+| ------------ | ----------------------------- |
+| <a>          | Hyperlink                     |
+| <img>        | ምስል                           |
+| <picture>    | ተስማሚ ምስል ምርጫ                  |
+| <source>     | የምስል፣ ድምፅ ወይም ቪዲዮ ምንጭ         |
+| <figure>     | ምስል፣ ዲያግራም ወይም ሌላ ራሱን የቻለ ይዘት |
+| <figcaption> | የFigure ማብራሪያ                 |
+| <audio>      | ድምፅ                           |
+| <video>      | ቪዲዮ                           |
+| <track>      | Subtitle ወይም Caption          |
+| <iframe>     | ሌላ ድረ-ገጽን ማካተት                |
+| <embed>      | ውጫዊ ይዘት ማሳየት                  |
+| <object>     | ውጫዊ Resource ማካተት             |
+| <map>        | የምስል አካባቢዎችን ከLink ጋር ማያያዝ    |
+| <area>       | በImage Map ውስጥ የሚጫን አካባቢ      |
+
+### 4\. Lists እና Tables
+
+| Tag        | ትርጉም            |
+| ---------- | --------------- |
+| <ul>       | በነጥብ የሚዘረዝር     |
+| <ol>       | በቁጥር የሚዘረዝር     |
+| <li>       | የዝርዝር ንጥል       |
+| <dl>       | የቃልና ማብራሪያ ዝርዝር |
+| <dt>       | የሚብራራው ቃል       |
+| <dd>       | የቃሉ ማብራሪያ       |
+| <table>    | ሰንጠረዥ           |
+| <caption>  | የሰንጠረዥ ርዕስ      |
+| <thead>    | የሰንጠረዥ ራስጌ ረድፎች |
+| <tbody>    | ዋና የሰንጠረዥ ይዘት   |
+| <tfoot>    | የመጨረሻ ረድፎች      |
+| <tr>       | ረድፍ             |
+| <th>       | የራስጌ ሴል         |
+| <td>       | የውሂብ ሴል         |
+| <colgroup> | የአምዶች ቡድን       |
+| <col>      | የአምድ ቅንብር       |
+
+### 5\. Forms እና Input Types
+
+| Tag        | ትርጉም                 |
+| ---------- | -------------------- |
+| <form>     | የመረጃ መሙያ ቅጽ          |
+| <label>    | የመስክ ስም              |
+| <input>    | የመረጃ ግቤት             |
+| <textarea> | ረዥም ጽሑፍ ማስገቢያ        |
+| <button>   | ቁልፍ                  |
+| <select>   | የምርጫ ዝርዝር            |
+| <option>   | የምርጫ ንጥል             |
+| <optgroup> | የምርጫ ንጥሎች ቡድን        |
+| <fieldset> | ተዛማጅ የForm መስኮች      |
+| <legend>   | የFieldset ርዕስ        |
+| <datalist> | የጥቆማ አማራጮች           |
+| <output>   | የስሌት ውጤት             |
+| <progress> | የሂደት መጠን             |
+| <meter>    | በተወሰነ ክልል ውስጥ ያለ መጠን |
+
+የ`<input>` ዋና ዋና `type` እሴቶች፦
+
+`text`, `password`, `email`, `number`, `tel`, `url`, `search`, `date`, `time`, `datetime-local`, `month`, `week`, `color`, `checkbox`, `radio`, `file`, `hidden`, `range`, `submit`, `reset`, `button`, `image`.
+
+### 6\. Semantic፣ Interactive እና የሌሎች HTML Tags
+
+* Semantic: `<header>`, `<nav>`, `<main>`, `<section>`, `<article>`, `<aside>`, `<footer>`, `<address>`, `<search>`.
+
+* Interactive: `<details>`, `<summary>`, `<dialog>`.
+
+* ሌሎች: `<time>`, `<data>`, `<bdi>`, `<bdo>`, `<ruby>`, `<rt>`, `<rp>`, `<template>`, `<slot>`, `<canvas>`, `<svg>`, `<math>`, `<script>`, `<noscript>`.
+
+አንዳንድ የቀድሞ ወይም የተሰረዙ ታጎች እንደ `<font>`, `<center>`, `<marquee>`, `<big>`, `<frame>`, `<frameset>`, `<acronym>`, `<strike>` እና `<tt>` በአዲስ ፕሮጀክት መጠቀም አይመከርም።
+
+### ክፍል 2፦ CSS ሙሉ የጥናት መዝገበ-ቃላት
+
+CSS የHTML ኤለመንቶችን ቀለም፣ ቅርጽ፣ መጠንና አቀማመጥ ይቆጣጠራል።
+
+### 7\. CSS Selectors
+
+| Selector       | አገልግሎት                              |
+| -------------- | ----------------------------------- |
+| *              | ሁሉንም ኤለመንቶች                         |
+| p              | ሁሉንም p Tags                         |
+| .class         | በClass ስም መምረጥ                      |
+| #id            | በID መምረጥ                            |
+| A B            | B በA ውስጥ ሲኖር                        |
+| A > B          | ቀጥተኛ ልጅ                             |
+| A + B          | ወዲያውኑ የሚቀጥለው ወንድም ኤለመንት             |
+| A ~ B          | ተከታይ ወንድም ኤለመንቶች                    |
+| [type]         | የተወሰነ Attribute ያለው                 |
+| [type="text"]  | Attribute የተወሰነ እሴት ሲኖረው            |
+| :hover         | Mouse በላዩ ሲያርፍ                      |
+| :focus         | ኤለመንት ትኩረት ሲያገኝ                     |
+| :active        | ኤለመንት ሲነቃ                           |
+| :checked       | Checkbox ወይም Radio ሲመረጥ             |
+| :disabled      | ኤለመንት ሲሰናከል                         |
+| :first-child   | የመጀመሪያ ልጅ                           |
+| :last-child    | የመጨረሻ ልጅ                            |
+| :nth-child(n)  | በቁጥር የተወሰነ ልጅ                       |
+| :not()         | የተወሰነውን የማይመርጥ                      |
+| :is()          | ከብዙ Selectors አንዱን መምረጥ             |
+| :where()       | ዝቅተኛ Specificity ያለው የSelector ቡድን  |
+| :has()         | የተወሰነ የውስጥ ወይም ተዛማጅ ኤለመንት ያለውን መምረጥ |
+| ::before       | ከይዘቱ በፊት የPseudo-element ስታይል       |
+| ::after        | ከይዘቱ በኋላ የPseudo-element ስታይል       |
+| ::first-letter | የመጀመሪያ ፊደል                          |
+| ::first-line   | የመጀመሪያ መስመር                         |
+| ::selection    | ተመርጦ የተደምቀ ጽሑፍ                      |
+
+### 8\. CSS የጽሑፍ፣ ቀለምና Background Properties
+
+| Property              | አገልግሎት                |
+| --------------------- | --------------------- |
+| color                 | የጽሑፍ ቀለም              |
+| background            | አጠቃላይ Background ቅንብር |
+| background-color      | የጀርባ ቀለም              |
+| background-image      | የጀርባ ምስል              |
+| background-size       | የBackground መጠን       |
+| background-position   | የBackground ቦታ        |
+| background-repeat     | የBackground ድግግሞሽ     |
+| background-attachment | ከገጹ ጋር መንቀሳቀሱን መቆጣጠር  |
+| opacity               | የግልጽነት መጠን            |
+| font-family           | የፊደል ቤተሰብ             |
+| font-size             | የፊደል መጠን              |
+| font-weight           | የፊደል ውፍረት             |
+| font-style            | የፊደል ቅርጽ              |
+| font-variant          | የፊደል ልዩ ቅርጾች          |
+| line-height           | የመስመር ርቀት             |
+| letter-spacing        | የፊደል ርቀት              |
+| word-spacing          | የቃላት ርቀት              |
+| text-align            | የጽሑፍ አቀማመጥ            |
+| text-align-last       | የመጨረሻ መስመር አቀማመጥ      |
+| text-decoration       | የጽሑፍ ማስዋቢያ            |
+| text-transform        | የፊደል ትልቅና ትንሽ መሆን     |
+| text-indent           | የአንቀጽ መጀመሪያ ርቀት       |
+| text-shadow           | የጽሑፍ ጥላ               |
+| text-overflow         | ከቦታ የሚበልጥ ጽሑፍ ማሳያ     |
+| white-space           | የክፍተትና መስመር አያያዝ      |
+| overflow-wrap         | ረጅም ቃል እንዲሰበር         |
+| word-break            | የቃል መሰበር              |
+| hyphens               | የቃል ክፍፍል              |
+| direction             | የጽሑፍ አቅጣጫ             |
+| writing-mode          | የጽሑፍ አቀማመጥ አቅጣጫ       |
+
+### 9\. CSS Box Model፣ Size እና Border
+
+| Property                      | አገልግሎት                   |
+| ----------------------------- | ------------------------ |
+| width, height                 | ስፋትና ቁመት                 |
+| min-width, max-width          | ዝቅተኛና ከፍተኛ ስፋት           |
+| min-height, max-height        | ዝቅተኛና ከፍተኛ ቁመት           |
+| margin                        | የውጭ ርቀት                  |
+| margin-top                    | የላይ ውጭ ርቀት               |
+| margin-right                  | የቀኝ ውጭ ርቀት               |
+| margin-bottom                 | የታች ውጭ ርቀት               |
+| margin-left                   | የግራ ውጭ ርቀት               |
+| padding                       | የውስጥ ርቀት                 |
+| padding-top/right/bottom/left | የውስጥ ርቀቶች                |
+| border                        | የድንበር ቅንብር               |
+| border-width                  | የድንበር ውፍረት               |
+| border-style                  | የድንበር ቅርጽ                |
+| border-color                  | የድንበር ቀለም                |
+| border-radius                 | የጠርዝ ክብነት                |
+| border-top/right/bottom/left  | የተለያዩ የድንበር ጎኖች          |
+| outline                       | ከBorder ውጭ የሚታይ መስመር     |
+| outline-offset                | በOutlineና ኤለመንት መካከል ርቀት |
+| box-shadow                    | የBox ጥላ                  |
+| box-sizing                    | የመጠን ስሌት ዘዴ              |
+| aspect-ratio                  | የስፋትና ቁመት ጥምርታ           |
+| overflow                      | ከወሰን የሚወጣ ይዘት            |
+| overflow-x, overflow-y        | አግድምና ቁመታዊ Overflow      |
+
+### 10\. CSS Display፣ Position፣ Flexbox እና Grid
+
+| Property                 | አገልግሎት                         |
+| ------------------------ | ------------------------------ |
+| display                  | የኤለመንት አቀራረብ                   |
+| visibility               | የሚታይ መሆኑን መቆጣጠር                |
+| position                 | የኤለመንት አቀማመጥ                   |
+| top, right, bottom, left | የአቀማመጥ ማስተካከያ                  |
+| inset                    | የአቀማመጥ አቅጣጫዎችን በአንድ ማስተካከል     |
+| z-index                  | የፊትና የኋላ ደረጃ                   |
+| float                    | ይዘትን ወደ ጎን ማስቀመጥ               |
+| clear                    | የFloat ተፅዕኖን መቆጣጠር             |
+| flex-direction           | የFlex አቅጣጫ                     |
+| flex-wrap                | ወደ ቀጣይ መስመር መሄድ                |
+| flex-flow                | የFlex Directionና Wrap አጭር ቅንብር |
+| justify-content          | በዋናው አቅጣጫ ማስተካከል               |
+| align-items              | በተሻጋሪ አቅጣጫ ማስተካከል              |
+| align-content            | ብዙ ረድፎችን ማስተካከል                |
+| align-self               | የአንድ ንጥል አቀማመጥ                 |
+| flex                     | የFlex እድገት፣ መቀነስና መሠረታዊ መጠን    |
+| flex-grow                | ቦታ ሲኖር መስፋት                    |
+| flex-shrink              | ቦታ ሲጠብ መቀነስ                    |
+| flex-basis               | መሠረታዊ መጠን                      |
+| order                    | የFlex/Grid ንጥል ቅደም ተከተል        |
+| gap                      | በንጥሎች መካከል ርቀት                 |
+| row-gap, column-gap      | በረድፍና በአምድ መካከል ርቀት            |
+| grid-template-columns    | የGrid አምዶች                     |
+| grid-template-rows       | የGrid ረድፎች                     |
+| grid-template-areas      | የGrid አካባቢ ስሞች                 |
+| grid-column              | የአምድ ወሰን                       |
+| grid-row                 | የረድፍ ወሰን                       |
+| grid-area                | የGrid ንጥል ቦታ                   |
+| grid-auto-flow           | አውቶማቲክ የGrid ንጥሎች አቀማመጥ        |
+| place-items              | የGrid ንጥሎች አቀማመጥ               |
+| place-content            | የGrid ይዘት አቀማመጥ                |
+| place-self               | የአንድ ንጥል አቀማመጥ                 |
+
+### 11\. CSS Effects፣ Transforms እና Animation
+
+| Property / Rule           | አገልግሎት                      |
+| ------------------------- | --------------------------- |
+| cursor                    | የMouse ጠቋሚ ቅርጽ              |
+| filter                    | Blur እና ሌሎች የምስል ተፅዕኖዎች     |
+| backdrop-filter           | ከኤለመንት ጀርባ ያለውን ማስተካከል      |
+| transform                 | ማዞር፣ ማሳደግ፣ ማንቀሳቀስ           |
+| transform-origin          | የTransform መነሻ ነጥብ          |
+| transition                | ለስላሳ የስታይል ለውጥ              |
+| transition-duration       | የTransition ጊዜ              |
+| transition-delay          | የTransition መዘግየት           |
+| transition-property       | የሚቀየረው Property             |
+| animation                 | የAnimation አጠቃላይ ቅንብር       |
+| animation-name            | የAnimation ስም               |
+| animation-duration        | የAnimation ጊዜ               |
+| animation-delay           | የAnimation መዘግየት            |
+| animation-iteration-count | የድግግሞሽ ብዛት                  |
+| animation-direction       | የAnimation አቅጣጫ             |
+| animation-timing-function | የፍጥነት ለውጥ                   |
+| animation-fill-mode       | ከAnimation በፊትና በኋላ ያለ ስታይል |
+| animation-play-state      | Animation ማቆም ወይም ማስቀጠል     |
+| @keyframes                | የAnimation ደረጃዎችን መግለጽ      |
+| scroll-behavior           | የScroll እንቅስቃሴ              |
+| scroll-snap-type          | የScroll ማስተካከያ ነጥቦች         |
+| object-fit                | ምስልን በመያዣ ውስጥ ማስማማት         |
+| object-position           | የምስል አቀማመጥ                  |
+
+### 12\. CSS Responsive Design፣ Units እና Functions
+
+Units
+
+* ፍጹም መጠኖች፦ `px`, `cm`, `mm`, `in`, `pt`, `pc`
+
+* አንጻራዊ መጠኖች፦ `%`, `em`, `rem`, `ex`, `ch`, `lh`
+
+* Viewport መጠኖች፦ `vw`, `vh`, `vmin`, `vmax`, `svh`, `lvh`, `dvh`
+
+* የGrid መለኪያ፦ `fr`
+
+Responsive እና Rules
+
+| ቃል         | አገልግሎት                                |
+| ---------- | ------------------------------------- |
+| @media     | በScreen ወይም Device ሁኔታ መሠረት ስታይል መቀየር |
+| @supports  | Browser አንድ CSS ባህሪ መደገፉን መፈተሽ        |
+| @font-face | ብጁ Font ማስገባት                         |
+| @import    | ሌላ CSS ፋይል ማስገባት                      |
+| :root      | ዋናው HTML ኤለመንትና የCSS Variables መያዣ    |
+| var()      | CSS Variable መጠቀም                     |
+| calc()     | ስሌት                                   |
+| min()      | ከእሴቶች ዝቅተኛውን መውሰድ                     |
+| max()      | ከእሴቶች ከፍተኛውን መውሰድ                     |
+| clamp()    | በዝቅተኛና ከፍተኛ ገደብ መካከል መጠን መቆጣጠር        |
+| repeat()   | የGrid ቅንብርን መድገም                      |
+| minmax()   | የGrid ንጥል ዝቅተኛና ከፍተኛ መጠን              |
+| auto-fit   | የGrid አምዶችን በሚስማማ ሁኔታ ማስተካከል          |
+| auto-fill  | የGrid ትራኮችን በሚገኝ ቦታ መሠረት መፍጠር         |
+
+CSS ሌሎች ቁልፍ ቃላት፦ `inherit`, `initial`, `unset`, `revert`, `none`, `auto`, `normal`, `important`, `transparent`, `currentColor`.
+
+### ክፍል 3፦ JavaScript ሙሉ የጥናት መዝገበ-ቃላት
+
+JavaScript ውስጥ ያሉ ቃላትን በVariables፣ Operators፣ Conditions፣ Functions፣ Objects፣ DOM እና Browser APIs እንከፍላለን።
+
+### 13\. JavaScript Keywords
+
+| Keyword     | አገልግሎት                                            |
+| ----------- | ------------------------------------------------- |
+| let         | እንደገና ሊመደብ የሚችል Variable                          |
+| const       | እንደገና ሊመደብ የማይችል Variable                         |
+| var         | የቀድሞ Variable መግለጫ                                |
+| if          | ሁኔታ መፈተሽ                                          |
+| else        | ካልሆነ                                              |
+| switch      | በብዙ ሁኔታዎች መካከል መምረጥ                               |
+| case        | የSwitch ሁኔታ                                       |
+| default     | ነባሪ ምርጫ                                           |
+| for         | ድግግሞሽ                                             |
+| while       | ሁኔታ እውነት እስከሆነ ድረስ መድገም                           |
+| do          | ቢያንስ አንድ ጊዜ ማስኬድ                                  |
+| break       | Loop ወይም Switch ማቋረጥ                              |
+| continue    | ወደ ቀጣይ Loop ዙር መሄድ                                |
+| function    | Function መፍጠር                                     |
+| return      | ከFunction ውጤት መመለስ                                |
+| try         | ስህተት ሊከሰት የሚችል ኮድ                                 |
+| catch       | ስህተት መያዝ                                          |
+| finally     | በመጨረሻ የሚሠራ ክፍል                                    |
+| throw       | ስህተት ማስነሳት                                        |
+| class       | Class መፍጠር                                        |
+| extends     | ከሌላ Class መውረስ                                    |
+| constructor | የClass መጀመሪያ ማዋቀሪያ                                |
+| super       | የParent Class ባህሪያትን መጠቀም                         |
+| new         | አዲስ Object መፍጠር                                   |
+| this        | አሁን ያለውን Context ማመልከት                            |
+| import      | ከሌላ Module ኮድ ማስገባት                               |
+| export      | ኮድ ለሌላ Module ማቅረብ                                |
+| from        | የModule ምንጭ መግለጽ                                  |
+| as          | ሌላ ስም መስጠት                                        |
+| async       | Asynchronous Function መግለጽ                        |
+| await       | Promise ውጤትን መጠበቅ                                 |
+| yield       | ከGenerator ጊዜያዊ ውጤት መስጠት                          |
+| debugger    | የDebugging ነጥብ ማስገባት                              |
+| delete      | የObject Property ማስወገድ                            |
+| typeof      | የእሴት አይነት መፈተሽ                                    |
+| instanceof  | Object ከClass ወይም Constructor ጋር ግንኙነት መፈተሽ       |
+| in          | Property በObject ውስጥ መኖሩን መፈተሽ                    |
+| void        | የExpression ውጤትን undefined ማድረግ                   |
+| with        | በStrict Mode የማይፈቀድ የቀድሞ ባህሪ                      |
+| enum        | በJavaScript ውስጥ የተጠበቀ ስም፤ መደበኛ Enum Keyword አይደለም |
+
+ሌሎች የተለዩ እሴቶች፦ `true`, `false`, `null`, `undefined`, `NaN`, `Infinity`.
+
+### 14\. JavaScript Operators
+
+| Operator | አገልግሎት | |---|---| | `+` | መደመር ወይም ሕብረቃል ማያያዝ | | `-` | መቀነስ | | `*` | ማባዛት | | `/` | ማካፈል | | `%` | ቀሪ ማግኘት | | `**` | ወደ ኃይል ማሳደግ | | `=` | እሴት መመደብ | | `+=`, `-=`, `*=`, `/=` | ስሌት ከመመደብ ጋር | | `==` | ዓይነትን ሊቀይር በሚችል ንጽጽር | | `===` | ጥብቅ እኩልነት | | `!=` | ያልተለያዩ ዓይነቶችን ሊያስተካክል የሚችል አለመመሳሰል | | `!==` | ጥብቅ አለመመሳሰል | | `>` , `<` | ከፍተኛና ዝቅተኛ ንጽጽር | | `>=`, `<=` | ከዚያ በላይ/በታች ወይም እኩል | | `&&` | AND | | `||` | OR | | `!` | NOT | | `??` | Nullish coalescing | | `?.` | Optional chaining | | `condition ? a : b` | Ternary ምርጫ | | `++`, `--` | በአንድ መጨመር/መቀነስ | | `...` | Spread ወይም Rest | | `=>` | Arrow Function | | `typeof` | የእሴት አይነት | | `delete` | Object Property ማስወገድ | | `&`, `|`, `^`, `~` | Bitwise Operations | | `<<`, `>>`, `>>>` | Bitwise Shifts |
+
+### 15\. JavaScript Data Types
+
+| Data Type | ምሳሌ                 |
+| --------- | ------------------- |
+| String    | "Hello"             |
+| Number    | 42, 3.14            |
+| BigInt    | 123n                |
+| Boolean   | true, false         |
+| Undefined | undefined           |
+| Null      | null                |
+| Symbol    | Symbol("id")        |
+| Object    | {name: "Getnet"}    |
+| Array     | [1, 2, 3]           |
+| Function  | function greet() {} |
+
+### 16\. JavaScript String Methods
+
+| Method / Property | አገልግሎት              |
+| ----------------- | ------------------- |
+| .length           | የString ርዝመት        |
+| .charAt()         | በተወሰነ ቦታ ያለ ፊደል     |
+| .at()             | በIndex ፊደል ማግኘት     |
+| .includes()       | ጽሑፉ መኖሩን መፈተሽ       |
+| .indexOf()        | የመጀመሪያ ቦታ           |
+| .lastIndexOf()    | የመጨረሻ ቦታ            |
+| .slice()          | ክፍል መውሰድ            |
+| .substring()      | የጽሑፍ ክፍል ማግኘት       |
+| .replace()        | ጽሑፍ መተካት            |
+| .replaceAll()     | ሁሉንም ተዛማጅ ጽሑፎች መተካት |
+| .split()          | Stringን Array ማድረግ  |
+| .concat()         | ጽሑፎችን ማያያዝ          |
+| .trim()           | የጫፍ ክፍተቶችን ማስወገድ    |
+| .trimStart()      | የመጀመሪያ ክፍተት ማስወገድ   |
+| .trimEnd()        | የመጨረሻ ክፍተት ማስወገድ    |
+| .toUpperCase()    | ወደ ትልቅ ፊደል          |
+| .toLowerCase()    | ወደ ትንሽ ፊደል          |
+| .startsWith()     | በዚያ መጀመሩን መፈተሽ      |
+| .endsWith()       | በዚያ መጨረሱን መፈተሽ      |
+| .match()          | ከPattern ጋር ማዛመድ    |
+| .matchAll()       | ሁሉንም ተዛማጅ ውጤቶች ማግኘት |
+| .search()         | በPattern መፈለግ       |
+| .padStart()       | ከመጀመሪያ ቁምፊ መጨመር     |
+| .padEnd()         | ከመጨረሻ ቁምፊ መጨመር      |
+| .repeat()         | ጽሑፍ መድገም            |
+
+### 17\. JavaScript Array Methods
+
+| Method          | አገልግሎት                           |
+| --------------- | -------------------------------- |
+| Array.isArray() | Array መሆኑን መፈተሽ                  |
+| .push()         | ከመጨረሻ መጨመር                       |
+| .pop()          | ከመጨረሻ ማስወገድ                      |
+| .shift()        | ከመጀመሪያ ማስወገድ                     |
+| .unshift()      | ከመጀመሪያ መጨመር                      |
+| .map()          | እያንዳንዱን ንጥል ቀይሮ አዲስ Array ማግኘት   |
+| .filter()       | ሁኔታውን የሚያሟሉ ንጥሎችን ማግኘት           |
+| .find()         | የመጀመሪያውን ተስማሚ ንጥል ማግኘት           |
+| .findIndex()    | የተስማሚውን Index ማግኘት               |
+| .forEach()      | በእያንዳንዱ ንጥል ላይ ሥራ ማከናወን          |
+| .reduce()       | ንጥሎችን ወደ አንድ ውጤት ማጠቃለል           |
+| .reduceRight()  | ከቀኝ ወደ ግራ ማጠቃለል                  |
+| .includes()     | ንጥሉ መኖሩን መፈተሽ                    |
+| .indexOf()      | የንጥል Index                       |
+| .lastIndexOf()  | የመጨረሻ ተዛማጅ Index                 |
+| .slice()        | ክፍል በመውሰድ አዲስ Array              |
+| .splice()       | ንጥሎችን ማስወገድ/መጨመር                 |
+| .concat()       | Arrays ማያያዝ                      |
+| .join()         | Arrayን String ማድረግ               |
+| .sort()         | መደርደር                            |
+| .reverse()      | ቅደም ተከተል መገልበጥ                   |
+| .flat()         | የተደራረቡ Arrays ማጠፍ                |
+| .flatMap()      | Map ከFlat ጋር                     |
+| .some()         | ቢያንስ አንድ ንጥል ሁኔታውን ማሟላቱን መፈተሽ    |
+| .every()        | ሁሉም ንጥሎች ሁኔታውን ማሟላታቸውን መፈተሽ      |
+| .at()           | በIndex ንጥል ማግኘት                  |
+| .fill()         | ንጥሎችን በእሴት መሙላት                  |
+| .copyWithin()   | ንጥሎችን በውስጡ መቅዳት                  |
+| .toSorted()     | ዋናውን Array ሳይቀይር የተደረደረ Array    |
+| .toReversed()   | ዋናውን Array ሳይቀይር የተገለበጠ Array    |
+| .toSpliced()    | ዋናውን Array ሳይቀይር ንጥሎችን ማስተካከል    |
+| .with()         | በIndex ያለ ንጥል ቀይሮ አዲስ Array ማግኘት |
+
+### 18\. JavaScript Objects እና Built-in Objects
+
+| Object / Method         | አገልግሎት                              |
+| ----------------------- | ----------------------------------- |
+| Object.keys()           | የProperties ስሞች                     |
+| Object.values()         | የProperties እሴቶች                    |
+| Object.entries()        | የProperties እና Values ጥንዶች          |
+| Object.assign()         | የObject ባህሪያትን ማቀናጀት                |
+| Object.hasOwn()         | የራሱ Property መኖሩን መፈተሽ              |
+| Object.freeze()         | የObject ለውጦችን መከላከል                 |
+| Object.create()         | በተወሰነ Prototype ላይ Object መፍጠር      |
+| Object.fromEntries()    | የጥንዶችን ዝርዝር Object ማድረግ             |
+| Object.groupBy()        | ንጥሎችን በቡድን ማደራጀት                    |
+| Math.round()            | ወደ ቅርብ ኢንቲጀር ማጠጋጋት                  |
+| Math.floor()            | ወደ ታች ማጠጋጋት                         |
+| Math.ceil()             | ወደ ላይ ማጠጋጋት                         |
+| Math.random()           | የPseudo-random ቁጥር                  |
+| Math.max() / Math.min() | ከፍተኛ/ዝቅተኛ እሴት                       |
+| Math.abs()              | አዎንታዊ ርቀት እሴት                       |
+| Math.sqrt()             | ካሬ ሥር                               |
+| Math.pow()              | ወደ ኃይል ማሳደግ                         |
+| Number()                | ወደ Number መቀየር                      |
+| Number.isNaN()          | ትክክለኛውን NaN መፈተሽ                    |
+| Number.isFinite()       | የተወሰነ ቁጥር መሆኑን መፈተሽ                 |
+| parseInt()              | ኢንቲጀር ቁጥር ማንበብ                      |
+| parseFloat()            | የDecimal ቁጥር ማንበብ                   |
+| String()                | ወደ String መቀየር                      |
+| Boolean()               | ወደ Boolean መቀየር                     |
+| Date                    | ቀንና ሰዓት                             |
+| RegExp                  | የጽሑፍ ማዛመጃ Pattern                   |
+| JSON.parse()            | JSON Stringን ወደ JavaScript እሴት መቀየር |
+| JSON.stringify()        | JavaScript እሴትን JSON String ማድረግ    |
+| Map                     | የKey-Value መዋቅር                     |
+| Set                     | የተደጋገሙ እሴቶችን የማይቀበል መዋቅር            |
+| WeakMap                 | ደካማ ማጣቀሻ ያለው Map                    |
+| WeakSet                 | ደካማ ማጣቀሻ ያለው Set                    |
+| Promise                 | Asynchronous ውጤት                    |
+| Error                   | የስህተት ነገር                           |
+| Intl                    | የቋንቋና የአካባቢ ቅርጸት                    |
+
+### 19\. DOM Methods እና Properties
+
+| Method / Property                 | አገልግሎት                      |
+| --------------------------------- | --------------------------- |
+| document                          | የአሁኑ HTML ሰነድ               |
+| document.getElementById()         | በID መፈለግ                    |
+| document.getElementsByClassName() | በClass መፈለግ                 |
+| document.getElementsByTagName()   | በTag መፈለግ                   |
+| document.querySelector()          | በCSS Selector የመጀመሪያውን ማግኘት |
+| document.querySelectorAll()       | ሁሉንም ተዛማጅ ኤለመንቶች ማግኘት       |
+| document.createElement()          | ኤለመንት መፍጠር                  |
+| document.createTextNode()         | የጽሑፍ Node መፍጠር              |
+| element.textContent               | ጽሑፍ ማንበብ/መቀየር               |
+| element.innerHTML                 | HTML ይዘት ማንበብ/መቀየር          |
+| element.outerHTML                 | ኤለመንቱን ጨምሮ ያለው HTML         |
+| element.innerText                 | በአቀራረብ መሠረት የሚታይ ጽሑፍ        |
+| element.value                     | የForm እሴት                   |
+| element.getAttribute()            | Attribute ማንበብ              |
+| element.setAttribute()            | Attribute መጨመር/መቀየር         |
+| element.removeAttribute()         | Attribute ማስወገድ             |
+| element.hasAttribute()            | Attribute መኖሩን መፈተሽ         |
+| element.classList.add()           | Class መጨመር                  |
+| element.classList.remove()        | Class ማስወገድ                 |
+| element.classList.toggle()        | Class መቀያየር                 |
+| element.classList.contains()      | Class መኖሩን መፈተሽ             |
+| element.style                     | Inline CSS                  |
+| element.append()                  | ይዘት መጨመር                    |
+| element.prepend()                 | በመጀመሪያ መጨመር                 |
+| element.before() / after()        | ከኤለመንቱ በፊት/በኋላ መጨመር         |
+| element.remove()                  | ኤለመንት ማስወገድ                 |
+| element.replaceWith()             | ኤለመንት መተካት                  |
+| element.closest()                 | ቅርብ ተዛማጅ ወላጅ ማግኘት           |
+| element.matches()                 | ከCSS Selector ጋር መዛመዱን መፈተሽ |
+| element.parentElement             | ወላጅ ኤለመንት                   |
+| element.children                  | ቀጥተኛ ልጆች                    |
+| element.nextElementSibling        | ቀጣይ ወንድም ኤለመንት              |
+| element.previousElementSibling    | ቀዳሚ ወንድም ኤለመንት              |
+| element.focus()                   | ትኩረት መስጠት                   |
+| element.blur()                    | ትኩረት ማስወገድ                  |
+| element.click()                   | የClick እርምጃ ማስነሳት           |
+| element.insertAdjacentHTML()      | HTML በተወሰነ ቦታ ማስገባት         |
+
+የደህንነት ማስታወሻ፦ `innerHTML` ከተጠቃሚ በቀጥታ የተገኘ ያልተረጋገጠ ጽሑፍ ለማሳየት መጠቀም የXSS የደህንነት ችግር ሊያመጣ ይችላል። ለመደበኛ ጽሑፍ `textContent` ይመረጣል።
+
+### 20\. Events
+
+| Event            | መቼ ይከሰታል?                      |
+| ---------------- | ------------------------------ |
+| click            | ሲጫን                            |
+| dblclick         | ሁለት ጊዜ ሲጫን                     |
+| input            | በInput ይዘት ላይ ለውጥ ሲደረግ         |
+| change           | እሴት ሲቀየርና ለውጡ ሲታወቅ             |
+| submit           | Form ሲላክ                       |
+| reset            | Form ሲመለስ                      |
+| keydown          | የKeyboard ቁልፍ ሲጫን              |
+| keyup            | የKeyboard ቁልፍ ሲለቀቅ             |
+| pointerdown      | Pointer ሲጫን                    |
+| pointerup        | Pointer ሲለቀቅ                   |
+| mouseover        | Mouse በኤለመንት ላይ ሲገባ            |
+| mouseout         | Mouse ከኤለመንት ሲወጣ               |
+| mouseenter       | Mouse ወደ ኤለመንት ሲገባ             |
+| mouseleave       | Mouse ከኤለመንት ሲወጣ               |
+| focus            | ኤለመንት ትኩረት ሲያገኝ                |
+| blur             | ኤለመንት ትኩረት ሲያጣ                 |
+| load             | ሀብት ሲጫን                        |
+| DOMContentLoaded | HTML ተነቦ DOM ሲዘጋጅ              |
+| scroll           | ገጹ ሲሸበለል                       |
+| resize           | የWindow መጠን ሲቀየር               |
+| dragstart        | Drag ሲጀምር                      |
+| drop             | ነገር በDrop ቦታ ሲቀመጥ              |
+| copy             | ጽሑፍ ሲቀዳ                        |
+| paste            | ጽሑፍ ሲለጠፍ                       |
+| online           | Browser ከNetwork ጋር ግንኙነት ሲኖረው |
+| offline          | Browser የNetwork ግንኙነት ሲያጣ     |
+
+### 21\. JavaScript Asynchronous እና API ቃላት
+
+| ቃል                      | አገልግሎት                              |
+| ----------------------- | ----------------------------------- |
+| Promise                 | ወደፊት የሚገኝ ውጤት                       |
+| .then()                 | Promise ሲሳካ ሥራ ማከናወን                |
+| .catch()                | Promise ስህተት ሲኖር መያዝ                |
+| .finally()              | Promise ቢሳካም ባይሳካም መጨረሻ ሥራ          |
+| async                   | Asynchronous Function               |
+| await                   | Promise ውጤት መጠበቅ                    |
+| fetch()                 | ከServer ጋር HTTP ጥያቄ ማድረግ            |
+| Response                | የHTTP ምላሽ                           |
+| Request                 | የHTTP ጥያቄ                           |
+| Headers                 | የHTTP Headers                       |
+| URL                     | URL ማዋቀርና መተንተን                     |
+| URLSearchParams         | የQuery Parameters አያያዝ              |
+| AbortController         | የFetch ወይም ሌላ ተሰርዞ ሊቆም የሚችል ሥራ ማቋረጥ |
+| FormData                | የForm መረጃ ማዘጋጀት                     |
+| Blob                    | ጥሬ የፋይል ይዘት                         |
+| File                    | የፋይል መረጃ                            |
+| FileReader              | ፋይል ማንበብ                            |
+| localStorage            | በBrowser ውስጥ ዘላቂ የKey-Value ማከማቻ    |
+| sessionStorage          | ለአሁኑ Tab Session የሚሆን ማከማቻ          |
+| setTimeout()            | ከተወሰነ መዘግየት በኋላ ሥራ ማስኬድ             |
+| setInterval()           | በየጊዜው ሥራ ማስኬድ                       |
+| clearTimeout()          | Timeout መሰረዝ                        |
+| clearInterval()         | Interval ማቆም                        |
+| requestAnimationFrame() | ለAnimation ተስማሚ ጊዜ ላይ ሥራ ማስኬድ       |
+| URL.createObjectURL()   | ለBlob ወይም File ጊዜያዊ URL መፍጠር        |
+| crypto                  | የBrowser Cryptographic ተግባራት        |
+
+### 22\. የJavaScript ሌሎች አስፈላጊ ጽንሰ-ሐሳቦች
+
+* Scope — ተለዋዋጭ የሚታይበት ክልል
+
+* Hoisting — ከDeclaration በፊት የሚታይ የአያያዝ ባህሪ
+
+* Closure — Function ከውጫዊ Scope መረጃ መያዙ
+
+* Callback — ለሌላ Function የሚሰጥ Function
+
+* Recursion — Function ራሱን መጥራት
+
+* Higher-order function — Function መቀበል ወይም መመለስ የሚችል Function
+
+* Destructuring — ከArray ወይም Object እሴቶችን ማውጣት
+
+* Spread syntax — የIterable ወይም Object እሴቶችን ማስፋት
+
+* Rest parameters — ብዙ አርግመንቶችን ወደ Array መሰብሰብ
+
+* Prototype — የObject የውርስ መዋቅር
+
+* Event bubbling — Event ከልጅ ወደ ወላጅ መሄድ
+
+* Event delegation — በወላጅ ላይ Event በመያዝ የልጆችን ክስተት መቆጣጠር
+
+* Strict mode — ጥብቅ የJavaScript አሠራር
+
+* Module — ኮድን በተለያዩ ፋይሎች ማደራጀት
+
+* Error handling — ስህተት መቆጣጠር
+
+* JSON — የውሂብ ልውውጥ ቅርጸት
+
+* API — በሶፍትዌሮች መካከል የግንኙነት መንገድ
+
+* HTTP methods — `GET`, `POST`, `PUT`, `PATCH`, `DELETE`
+
+* HTTP status codes — `200`, `201`, `400`, `401`, `403`, `404`, `500`
+
+### 23\. ሙሉ የትምህርት ቅደም ተከተል
+
+ከእነዚህ ሁሉ ቃላት በአንድ ጊዜ መማር አያስፈልግም። በሚከተለው ቅደም ተከተል ተማር፦
+
+### የመማር ሂደት
+
+0 / 8
+
+HTML
+
+Structure, Tags, Attributes, Forms, Semantic HTML
+
+CSS
+
+Selectors, Colors, Box Model, Flexbox, Grid, Responsive Design
+
+JavaScript Basics
+
+Variables, Data Types, Operators, Conditions, Loops, Functions
+
+JavaScript DOM
+
+Selectors, Events, Forms, Validation, Dynamic HTML
+
+Modern JavaScript
+
+Arrays, Objects, Modules, Promises, async/await, Fetch, JSON
+
+Projects
+
+Portfolio Website, Calculator, Registration Form, To-do App
+
+TypeScript
+
+Types, Interfaces, Generics, Type Safety
+
+React and Next.js
+
+Components, Props, State, Routing, Data Fetching
+
+በደረጃ ትምህርት ጀምር
+
+የመጨረሻ ማስታወሻ፦ ይህ ሰፊ የተግባር መዝገበ-ቃላት ነው፣ ግን ሁሉንም የCSS Properties፣ የBrowser APIs ወይም የJavaScript Library ስሞች በቃል በቃል የያዘ አይደለም። የሙሉ ይፋዊ ዝርዝር ለማጣቀስ፦
+
+* HTML: [MDN HTML Reference](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference)
+
+* CSS: [MDN CSS Reference](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference)
+
+* JavaScript: [MDN JavaScript Reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference)
+ 
+</p>
+
+
+
+
+    
+
+    
     <!-- የኢትዮጵያ ዲጂታል ሰዓት ሳጥን -->
     <div class="ethiopian-clock-box">
         <div class="clock-time" id="eth-time">00:00:00</div>
