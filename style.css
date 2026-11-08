@@ -2,7 +2,7 @@
 /* 
   Project: CSS Glowing Button
 */
-
+/*
 html, body {
   display: flex;
   justify-content: center;
@@ -11,7 +11,7 @@ html, body {
   overflow: hidden;
   /* transform: scale(1.5); */
 }
-
+*/
 /* button */
 .btn {
   margin: 100px;
